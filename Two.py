@@ -33,6 +33,7 @@ with st.form("my_form"):
     
 #一个Text_input
     txt = st.text_input('输入一个值',value="",type="default")#type为缺省
+    Registration_default = '0'
     
 #一个表单提交按钮form_submit_button
     submit_button = st.form_submit_button('提交')
