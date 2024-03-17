@@ -10,7 +10,7 @@ df = pd.read_csv(url_data,encoding="utf8")
 
 #创建expander容器
 with st.expander("显示原始数据"):
-    st.DataFrame(df)
+    st.dataframe(df)
     
 #以地图显示
 df1 = pd.read_csv(url_data,usecols=["经度","纬度"],encoding="utf8")
