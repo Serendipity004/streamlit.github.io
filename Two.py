@@ -29,7 +29,7 @@ with st.form("my_form"):
     
 #第二个“选择一个关系”
     names2 = list(['>','<'])
-    name2 = st.selectbox('选择一个字段',names2)
+    name2 = st.selectbox('选择一个关系',names2)
     
 #一个Text_input
     txt = st.text_input('输入一个值',value="0",type="default")#type为缺省
