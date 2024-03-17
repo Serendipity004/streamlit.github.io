@@ -17,8 +17,6 @@ df1["lat"] = df1["纬度"]
 st.map(df1)
 
 #创建表单
-col=st.columns(1)
-with col:
     with st.form("my_form"):
         st.title("基于属性表达式查询记录")
 #两个selectbox
