@@ -20,7 +20,7 @@ df1["lat"] = df1["纬度"]
 
 #创建表单
 with st.form("my_form"):
-    st.title("基于属性表达式查询记录")
+    st.header("基于属性表达式查询记录")
 
 #两个selectbox
 #第一个“选择一个字段”
