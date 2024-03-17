@@ -41,7 +41,7 @@ with col:
                 st.markdown("错误:heavy_multiplication_x:，请重新输入")
 
     #一个表单提交按钮form_submit_button
-         st.form_submit_button('提交')
+        st.form_submit_button('提交')
 
 #创建expander容器
 with st.expander("显示原始数据"):
