@@ -39,9 +39,9 @@ field=st.write(name1)
 re=st.write(name2)
 value=st.write(txt)
 Registration_default = '0'
-    if st.button("提交"):
-        if re==">":
-            st.dataframe(df[field]>float(f"{value}"))      
-            st.map(df1)
-        else:
-            st.markdown(df[field]<float(f"{value}"))
+if st.button("提交"):
+    if re==">":
+        st.dataframe(df[field]>float(f"{value}"))      
+        st.map(df1)
+    else:
+        st.dataframe(df[field]<float(f"{value}"))
