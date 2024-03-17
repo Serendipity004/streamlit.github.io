@@ -50,3 +50,4 @@ with st.form("my_form"):
         else:
             raise ValueError("Invalid relational operator")
         filtered_df = df[condition]
+        st.dataframe(filtered_df)
