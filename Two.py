@@ -35,22 +35,14 @@ with st.form("my_form"):
     txt = st.text_input('输入一个值',value="",type="default")#type为缺省
     
 #一个表单提交按钮form_submit_button
-    st.form_submit_button('提交')
-    field=st.write(name1)
-    re=st.write(str(name2))
-    value=st.write(txt)
+    submit_button = st.form_submit_button('提交')
 
-    field=str(field)
-    re=str(re)
-    value=str(value)
-    
-    Registration_default = '0'
-    if st.button("提交"):
-        column_name = df.columns[df.columns.str.contains(field)][0]
-        if re == "<":
-            condition = df[column_name] < float(value)
-        elif re == ">":
-            condition = df[column_name] > float(value)
+    if submit_button:
+        column_name = df.columns[df.columns.str.contains(name1)][0]
+        if name2 == "<":
+            condition = df[column_name] < float(txt)
+        elif name2 == ">":
+            condition = df[column_name] > float(txt)
         else:
             raise ValueError("Invalid relational operator")
         filtered_df = df[condition]
