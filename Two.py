@@ -32,8 +32,7 @@ with st.form("my_form"):
     name2 = st.selectbox('选择一个字段',names2)
     
 #一个Text_input
-    txt = st.text_input('输入一个值',value="",type="default")#type为缺省
-    Registration_default = int(0)
+    txt = st.text_input('输入一个值',value="0",type="default")#type为缺省
     
 #一个表单提交按钮form_submit_button
     submit_button = st.form_submit_button('提交')
