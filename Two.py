@@ -16,7 +16,7 @@ with st.expander("显示原始数据"):
 df1 = pd.read_csv(url_data,usecols=["经度","纬度"],encoding="utf8")
 df1["lon"] = df1["经度"]
 df1["lat"] = df1["纬度"]
-st.map(df1)
+#st.map(df1)
 
 #创建表单
 with st.form("my_form"):
@@ -25,10 +25,10 @@ with st.form("my_form"):
     st.form_submit_button('提交')
 #两个selectbox
 #第一个“选择一个字段”
-    name1 = st.multiselect('选择一个字段',names1)
+    name1 = st.selectbox('选择一个字段',names1)
     names1 = list(["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"])
 #第二个“选择一个关系”
-    name2 = st.multiselect('选择一个字段',names2)
+    name2 = st.selectbox('选择一个字段',names2)
     names2 = list(['>','<'])
 #一个Text_input
     txt = st.text_input('输入一个值',value="",type="default")#type为缺省
