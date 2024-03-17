@@ -46,6 +46,7 @@ with st.form("my_form"):
         else:
             raise ValueError("Invalid relational operator")
         filtered_df = df[condition]
+        st.header("共有{}条记录".format(df.shape[0]))
         st.dataframe(filtered_df)
         
         df1 = filtered_df[['经度', '纬度']]  # 选择经度和纬度列
