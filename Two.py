@@ -36,11 +36,11 @@ with st.form("my_form"):
 #一个表单提交按钮form_submit_button
     st.form_submit_button('提交')
     field=st.write(name1)
-    re=st.write(name2)
+    re=st.write(str(name2))
     value=st.write(txt)
     Registration_default = '0'
     if st.button("提交"):
-        if re==">":
+        if re=='>':
             st.dataframe(df[field]>float(f"{value}"))      
             st.map(df1)
         else:
