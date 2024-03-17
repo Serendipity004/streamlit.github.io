@@ -35,11 +35,13 @@ with st.form("my_form"):
     txt = st.text_input('输入一个值',value="",type="default")#type为缺省
 #一个表单提交按钮form_submit_button
     st.form_submit_button('提交')
-
+field=st.write(name1)
+re=st.write(name2)
+value=st.write(txt)
     Registration_default = '0'
     if st.button("提交"):
-        if txt==Registration_default:
-            st.dataframe(df)      
+        if re==">":
+            st.dataframe(df[field]>float(f"{value}"))      
             st.map(df1)
         else:
-            st.markdown("错误:heavy_multiplication_x:，请重新输入")
+            st.markdown(df[field]<float(f"{value}"))
