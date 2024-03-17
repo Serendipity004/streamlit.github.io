@@ -39,7 +39,8 @@ with st.form("my_form"):
     field=st.write(name1)
     re=st.write(str(name2))
     value=st.write(txt)
-    
+
+    field,re,value=str(field,re,value)
     Registration_default = '0'
     if st.button("提交"):
         column_name = df.columns[df.columns.str.contains(field)][0]
