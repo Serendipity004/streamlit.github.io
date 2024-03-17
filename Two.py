@@ -21,8 +21,7 @@ df1["lat"] = df1["纬度"]
 #创建表单
 with st.form("my_form"):
     st.title("基于属性表达式查询记录")
-#一个表单提交按钮form_submit_button
-    st.form_submit_button('提交')
+
 #两个selectbox
 #第一个“选择一个字段”
     names1 = list(["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"])
@@ -34,6 +33,9 @@ with st.form("my_form"):
     
 #一个Text_input
     txt = st.text_input('输入一个值',value="",type="default")#type为缺省
+#一个表单提交按钮form_submit_button
+    st.form_submit_button('提交')
+
     Registration_default = '0'
     if st.button("提交"):
         if txt==Registration_default:
