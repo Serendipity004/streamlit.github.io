@@ -47,4 +47,7 @@ with st.form("my_form"):
             raise ValueError("Invalid relational operator")
         filtered_df = df[condition]
         st.dataframe(filtered_df)
-        st.map(filtered_df)
+        df1 = dataframe(filtered,usecols=["经度","纬度"],encoding="utf8")
+        df1["lon"] = df1["经度"]
+        df1["lat"] = df1["纬度"]
+        st.map(df1)
