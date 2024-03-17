@@ -38,7 +38,7 @@ with st.form("my_form"):
 field=st.write(name1)
 re=st.write(name2)
 value=st.write(txt)
-    Registration_default = '0'
+Registration_default = '0'
     if st.button("提交"):
         if re==">":
             st.dataframe(df[field]>float(f"{value}"))      
