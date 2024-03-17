@@ -19,7 +19,7 @@ st.map(df1)
 #创建表单
 col=st.columns(1)
 with col:
-    with st.form("my_form")
+    with st.form("my_form"):
     st.title("基于属性表达式查询记录")
 #两个selectbox
     #第一个“选择一个字段”
