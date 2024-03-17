@@ -19,6 +19,8 @@ st.map(df1)
 #创建表单
 with st.form("my_form"):
     st.title("基于属性表达式查询记录")
+#一个表单提交按钮form_submit_button
+    st.form_submit_button('提交')
 #两个selectbox
     #第一个“选择一个字段”
     name1 = st.multiselect('选择一个字段',names1)
@@ -38,8 +40,7 @@ with st.form("my_form"):
         else:
             st.markdown("错误:heavy_multiplication_x:，请重新输入")
 
-    #一个表单提交按钮form_submit_button
-    st.form_submit_button('提交')
+    
 
 #创建expander容器
 with st.expander("显示原始数据"):
