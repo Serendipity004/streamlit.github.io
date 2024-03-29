@@ -1,12 +1,10 @@
->>> import requests
->>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
->>> r.status_code
-200
->>> r.headers['content-type']
-'application/json; charset=utf8'
->>> r.encoding
-'utf-8'
->>> r.text
-'{"authenticated": true, ...'
->>> r.json()
-{'authenticated': True, ...}
+import pandas as pd
+import streamlit as st
+import requests
+url = "https://api.asilu.com/idcard/?"
+parameters = "id=152502199405148245"
+response = requests.get(url + parameters)
+dic = response.json()
+print(f"地址：{dic['addr']}")
+print(f"出生日期：{dic['date']}")
+print(f"性别：{dic['sex']}")
