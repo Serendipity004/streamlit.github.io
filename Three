@@ -1,10 +1,3 @@
-import pandas as pd
-import streamlit as st
 import requests
-url = "https://api.asilu.com/idcard/?"
-parameters = "id=152502199405148245"
-response = requests.get(url + parameters)
-dic = response.json()
-print(f"地址：{dic['addr']}")
-print(f"出生日期：{dic['date']}")
-print(f"性别：{dic['sex']}")
+response = requests.get('https://www.baidu.com')
+print(response.text)
